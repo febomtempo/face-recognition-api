@@ -26,7 +26,6 @@ const handleImage = (req, res, db) => {
       res.json(entries[0].entries);
     })
     .catch((err) => res.status(400).json("Não foi possível pegar as entries"));
-  db.insert({ user_id: req.body.id, link: req.body.input }).into("fotos");
 };
 
 module.exports = {
